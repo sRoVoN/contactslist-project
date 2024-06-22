@@ -1,10 +1,12 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*,
+*::before,
+*::after
+{
+  box-sizing: border-box;
 }
 
+
+/* 
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -39,4 +41,118 @@
 
 .read-the-docs {
   color: #888;
+} */
+ body{
+  font-family: "exo2";
+ }
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 0 auto;
+  height: auto;
+
+}
+.box-one {
+  width: 100%;
+  height: 15rem;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap
+}
+.box-two {
+  display: grid;
+  width: auto;
+  height: auto;
+  grid-template-columns: 400px 400px;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  margin: 2px;
+}
+
+@media only screen and (max-width: 1000px){
+  .box-one {
+    max-width: 100%;
+    height: 15rem;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .box-two {
+    grid-template-columns: 400px;
+    margin-left: 25px;
+  }
+  .btn-contact{
+    font-weight: 600;
+    background-color: #646cff;
+    display: inline-block;
+  }
+}
+.btn {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 0.97em;
+  font-weight: 500;
+  background-color: #9ff6fc;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  flex-wrap: nowrap;
+  margin-right: 1px;
+}
+.btn:hover {
+  border-color: #1cd7f8;
+}
+.btn:focus,
+.btn:focus-visible,
+.btn:active {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-style:hidden;
+  box-shadow: 0 0 0 1px #dabbf5;
+}
+@media screen and(min-width: 768px) {
+  .btn {
+    font-size: 0.0002em;
+    padding: auto;
+    flex-wrap: nowrap;
+    background-color: #646cff;
+  }
+  
+}
+.tabs {
+  display: inline;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.p {
+  font-weight: 400;
+  color: rgb(21, 37, 4);
+}
+.btn-contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 350px;
+  height: 58px;
+  background-color: honeydew;
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+  border: 1px solid rgb(195, 253, 249);
+  border-radius: 40px;
+  margin: 5px;
+  max-width: 100%;
+}
+.btn-contact:hover{
+  opacity: 0.4;
+}
+.btn img{
+  border-radius: 70px;
+  width: 3rem;
+  border: 1px solid rgb(1, 179, 149);
+}
+.btn > p {
+  font-weight: 600;
+  color:  rgb(253, 139, 126);
+  margin: 10px;
+  text-transform: uppercase;
 }
